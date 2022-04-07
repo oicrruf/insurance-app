@@ -13,7 +13,8 @@
     "@rneui/base": "^4.0.0-rc.1",
     "@rneui/themed": "^4.0.0-rc.1",
     "react": "17.0.2",
-    "react-native": "0.68.0"
+    "react-native": "0.68.0",
+    "react-native-responsive-screen": "^1.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

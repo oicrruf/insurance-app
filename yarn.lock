@@ -5913,6 +5913,11 @@
   dependencies:
     "lodash" "^4.17.15"
 
+"react-native-responsive-screen@^1.4.2":
+  "integrity" "sha512-BLYz0UUpeohrib7jbz6wDmtBD5OmiuMRko4IT8kIF63taXPod/c5iZgmWnr5qOnK8hMuKiGMvsM3sC+eHX/lEQ=="
+  "resolved" "https://registry.npmjs.org/react-native-responsive-screen/-/react-native-responsive-screen-1.4.2.tgz"
+  "version" "1.4.2"
+
 "react-native-safe-area-context@^3.1.9":
   "integrity" "sha512-xfpVd0CiZR7oBhuwJ2HcZMehg5bjha1Ohu1XHpcT+9ykula0TgovH2BNU0R5Krzf/jBR1LMjR6VabxdlUjqxcA=="
   "resolved" "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-3.4.1.tgz"
@@ -5931,7 +5936,7 @@
     "prop-types" "^15.7.2"
     "yargs" "^16.1.1"
 
-"react-native@*", "react-native@0.68.0":
+"react-native@*", "react-native@>=0.35", "react-native@0.68.0":
   "integrity" "sha512-Qi8KpG9rqiU0hVp05GKkuRe8iAVhblYMwpnwG3wkBi99Z/X8iZ0jD1b1UW0/y6oesmCyGQAxpsB36imU8zg1AQ=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.68.0.tgz"
   "version" "0.68.0"

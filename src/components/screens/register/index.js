@@ -6,10 +6,10 @@ import {
 } from 'react-native-responsive-screen';
 import { Text } from '@rneui/themed';
 
-const Home = () =>{
+const Register = () =>{
     return (
         <View style = {styles.container}>
-            <Text>Home</Text>
+            <Text>Register</Text>
         </View>
     );
 }
@@ -24,4 +24,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Home;
+export default Register;

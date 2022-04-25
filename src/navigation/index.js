@@ -7,16 +7,25 @@ import Register from '../components/screens/register';
 
 const Stack = createNativeStackNavigator();
 
-const Navigation = () => {
-    return (
-        <NavigationContainer>
+export const LoginScreen = () => {
+	return (
+		<NavigationContainer>
             <Stack.Navigator initialRouteName='Login'>
                 <Stack.Screen name="Login" component={Login} />
                 <Stack.Screen name="Home" component={Home} />
                 <Stack.Screen name="Register" component={Register} />
             </Stack.Navigator>
         </NavigationContainer>
+	);
+};
+
+export const HomeScreen = () => {
+    return (
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName='Home'>
+				<Stack.Screen name="Home" component={Home} />
+				<Stack.Screen name="Login" component={Login} />
+            </Stack.Navigator>
+        </NavigationContainer>
     )
 }
-
-export default Navigation;

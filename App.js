@@ -1,10 +1,10 @@
 
 import React from 'react';
-import Navigation from './src/navigation'
+import { LoginScreen, HomeScreen } from './src/navigation'
 
 const App = () => {
   return (
-    <Navigation/>
+    <LoginScreen/>
   );
 };
 

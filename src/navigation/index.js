@@ -12,7 +12,7 @@ export const LoginScreen = () => {
 		<NavigationContainer>
             <Stack.Navigator initialRouteName='Login'>
                 <Stack.Screen name="Login" component={Login} />
-                <Stack.Screen name="Home" component={Home} />
+                <Stack.Screen name="Home" component={HomeScreen} />
                 <Stack.Screen name="Register" component={Register} />
             </Stack.Navigator>
         </NavigationContainer>
@@ -24,7 +24,7 @@ export const HomeScreen = () => {
         <NavigationContainer>
             <Stack.Navigator initialRouteName='Home'>
 				<Stack.Screen name="Home" component={Home} />
-				<Stack.Screen name="Login" component={Login} />
+				<Stack.Screen name="Login" component={LoginScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     )

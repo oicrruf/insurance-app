@@ -1,0 +1,12 @@
+{
+    "es" : {
+        "isRequired": "Este campo es requerido",
+        "emailValidation": { 
+            "validLength": "Email invalido"
+        },
+        "passwordValidation": {
+            "validLength": "La contraseña es demasiado corta",
+            "isMatch" : "La contraseña no coincide"
+        }
+    }
+}

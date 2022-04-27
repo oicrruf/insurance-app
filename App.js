@@ -1,10 +1,13 @@
 
 import React from 'react';
-import { LoginScreen, HomeScreen } from './src/navigation'
+import { NavigationContainer } from '@react-navigation/native';
+import { LoginScreen } from './src/navigation'
 
 const App = () => {
   return (
-    <LoginScreen/>
+    <NavigationContainer>
+      <LoginScreen/>
+    </NavigationContainer>
   );
 };
 

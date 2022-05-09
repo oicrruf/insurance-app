@@ -4,22 +4,61 @@ import {
     heightPercentageToDP as hp,
     widthPercentageToDP as wp
 } from 'react-native-responsive-screen';
-import { Button } from '@rneui/themed';
+import { Button, Input } from '@rneui/themed';
+import {Formik} from 'formik';
+import * as Yup from 'yup';
+import messages from '../../../utils/messages.json'
+
+const SigninSchema = Yup.object().shape({
+	email: Yup.string()
+        .email(messages['es'].emailValidation.validLength)
+        .required(messages['es'].isRequired),
+	password: Yup.string()
+		.min(8, messages['es'].passwordValidation.validLength)
+		.required(messages['es'].isRequired)
+});
 
 const Login = ({ navigation }) => {
     return (
-        <View style = {styles.container}>
-            <Button
-                title = {'Iniciar sesión'}
-                containerStyle = {styles.buttonContainer}
-                onPress={() => navigation.navigate('Home')}
-            />
-            <Button
-                title = {'Registrarse'}
-                containerStyle = {styles.buttonContainer}
-                onPress={() => navigation.navigate('Register')}
-            />
-        </View>
+        <Formik
+        initialValues = {{email: '', password: ''}}
+        validationSchema = {SigninSchema}
+        onSubmit = { values => {
+            console.log(values);
+            navigation.navigate('Home')
+        }}>
+            {({handleChange, handleBlur, handleSubmit, values, errors, touched}) => (
+            <View style = {styles.container}>
+                <Input
+                    placeholder="Email"
+                    onChangeText={handleChange('email')}
+                    onBlur={handleBlur('email')}
+                    value={values.email}
+                    errorMessage={errors.email && touched.email ? errors.email : ''}
+                />
+                <Input
+                    secureTextEntry={true}
+                    placeholder="Contraseña"
+                    onChangeText={handleChange('password')}
+                    onBlur={handleBlur('password')}
+                    value={values.password}
+                    errorMessage={
+                        errors.password && touched.password ? errors.password : ''
+                    }
+                />
+                <Button
+                    title = {'Iniciar sesión'}
+                    containerStyle = {styles.buttonContainer}
+                    onPress={handleSubmit}
+                />
+                <Button
+                    title = {'Registrarse'}
+                    containerStyle = {styles.buttonContainer}
+                    onPress={() => navigation.navigate('Register')}
+                />
+            </View>
+        )}
+        </Formik>
     );
 }
 

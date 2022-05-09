@@ -7,17 +7,18 @@ import {
 import { Text, Button, Input } from '@rneui/themed';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
+import messages from '../../../utils/messages.json'
 
 const SignupSchema = Yup.object().shape({
 	email: Yup.string()
-        .email('Email invalido')
-        .required('Este campo es requerido'),
+        .email(messages['es'].emailValidation.validLength)
+        .required(messages['es'].isRequired),
 	password: Yup.string()
-		.min(8, 'La contraseña es demasiado corta')
-		.required('Este campo es requerido'),
+        .min(8, messages['es'].passwordValidation.validLength)
+		.required(messages['es'].isRequired),
     passwordConfirm: Yup.string()
-        .oneOf([Yup.ref('password')], 'La contraseña no coincide')
-		.required('Este campo es requerido')
+        .oneOf([Yup.ref('password')], messages['es'].passwordValidation.isMatch)
+		.required(messages['es'].isRequired)
 });
 
 const Register = () =>{

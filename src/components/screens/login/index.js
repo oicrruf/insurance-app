@@ -1,11 +1,11 @@
+import {Formik} from 'formik';
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import {Button, Input} from 'react-native-elements';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
-import {Button, Input} from 'react-native-elements';
-import {Formik} from 'formik';
 import * as Yup from 'yup';
 import messages from '../../../utils/messages.json';
 
